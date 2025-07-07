@@ -18,24 +18,21 @@ This plugin is currently in **active development** and may contain bugs or unfin
 - Feedback and bug reports are highly appreciated!
 
 ### 📥 Installation
-1. Download the latest build from the [releases](#) page (or build from source).
+1. Download the latest build from the [releases](https://github.com/ScapeCodes/SuiteX/releases) page (or build from source).
 2. Drop the `.jar` file into your server’s `/plugins` folder.
 3. Restart or reload your server.
 
 ### 🔧 Configuration
-- A default configuration file will be generated on first run.
-- You can edit it under `/plugins/YourPluginName/config.yml`.
-- Custom permissions and features will be documented as they stabilize.
+- Default configuration files will be generated on first run.
+- You can edit files under `/plugins/SuiteX/...`.
+- Permissions and features will be documented as they stabilize.
 
 ### 📣 Need Help?
 If you run into issues or have questions, feel free to:
 - [Open an issue](#)
 - Submit feedback via pull request
-- Chat with the community (if you have a Discord or forum, link it)
 
 ---
-
-Let me know if you'd like this rewritten for a specific plugin name, or want to include usage examples, command reference, or config samples.
 
 
 # Contributing to SuiteX
