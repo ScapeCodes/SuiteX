@@ -6,8 +6,8 @@ The best core suited for your minecraft server!
 You are welcome to use this plugin on **any server you want**, whether personal, public, or private — no special permission required.
 
 ### ✅ Supported Platforms
-- [Paper](w)
-- [Folia](w)
+- Paper
+- Folia
 
 > Compatibility is tested against the latest versions of both platforms.
 
