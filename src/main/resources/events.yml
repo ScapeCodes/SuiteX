@@ -1,0 +1,20 @@
+join:
+  motd:
+    enable: true
+    string:
+      - '&8&m+---------------------------------+&r'
+      - '&e&lWelcome to the server, &a{USERNAME}&e!'
+      - '&aThere are &e{ONLINE}&7/&e{MAX_ONLINE}&a players online!'
+      - ''
+      - '&e&l** &eEnjoy your time on the server! &e&l**'
+      - '&8&m+---------------------------------+&r'
+  enter:
+    enable: true
+    string: '&a&l+ &7{USERNAME}'
+  first-broadcast:
+    enable: true
+    string: ''
+
+leave:
+  enable: true
+  string: '&c&l- &7{USERNAME}'

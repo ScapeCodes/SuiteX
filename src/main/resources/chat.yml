@@ -1,0 +1,23 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                        Chat                          | #
+# +------------------------------------------------------+ #
+############################################################
+
+chat:
+
+  # should the chat module be enabled or disabled?
+  enable: true
+
+  # Chat formatting can be done in two ways, you can either define a standard format for all chat.
+  # Or you can give a group specific chat format, to give some extra variation.
+  # For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting
+
+  format: '&7{DISPLAYNAME} &8➟&f {MESSAGE}'
+  #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
+
+  group-formats: []
+  #  default: '{WORLDNAME} {DISPLAYNAME}&7:&r {MESSAGE}'
+  #  admins: '{WORLDNAME} &c[{GROUP}]&r {DISPLAYNAME}&7:&c {MESSAGE}'
+
+  chat-color-permission: 'score.chat.color'

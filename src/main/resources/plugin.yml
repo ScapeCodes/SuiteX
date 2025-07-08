@@ -1,0 +1,9 @@
+name: SuiteX
+version: '${version}'
+main: net.scape.project.suiteX.SuiteX
+api-version: 1.13
+softdepend:
+  - PlaceholderAPI
+authors: [Scape]
+folia-supported: true
+description: The best core suited for your minecraft server!

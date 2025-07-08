@@ -1,0 +1,65 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                Admin Core Control                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+admin:
+  # should netherite be completely disabled from the server?
+  disable-netherite: false
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   Chunk Limiter                      | #
+# +------------------------------------------------------+ #
+############################################################
+
+chunk-limiter:
+
+  # Should sCore disable the chunk limiter completely?
+  enable: true
+
+  # What blocks should SX limit per chunk?
+  # Make sure all blocks stated here are correct enum materials, they can be found here:
+  # (Latest MC Version) https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  # (1.12.2) https://helpch.at/docs/1.12.2/org/bukkit/Material.html
+  # (1.8.8) https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+  blocks:
+    HOPPER: 20
+    CHEST: 30
+    REDSTONE_BLOCK: 50
+    REDSTONE_REPEATER: 100
+    REDSTONE: 1024
+    TNT: 15
+    #ENDER_CHEST: 20
+  # What entities should SX limit per chunk?
+  # Make sure all entities stated here are correct enum values, they can be found here:
+  # (Latest MC Version) https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+  # (1.12.2) https://helpch.at/docs/1.12.2/org/bukkit/entity/EntityType.html
+  # (1.8.8) https://helpch.at/docs/1.8.8/index.html?org/bukkit/entity/EntityType.html
+  entities:
+    MINECART: 5
+    TNT_MINECART: 5
+    ARMOR_STAND: 10
+
+  ############################################################
+  # +------------------------------------------------------+ #
+  # |                 Creative Manager                     | #
+  # +------------------------------------------------------+ #
+  ############################################################
+
+creative-manager:
+
+  # Should SX disable the creative manager completely?
+  enable: true
+
+  alert-opped: true
+  # these alerts are when a non-opped player has creative that shouldn't.
+  alert: "&e[CREATIVE] {0} had creative mode but has been set to survival!"
+
+  # these are events that will be checked and set to survival
+  # if the player doesn't have permission: 'suitex.creativemanager.bypass'
+  set-survival:
+    on-join: true
+    world-change: true
+    on-teleport: true

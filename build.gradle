@@ -1,0 +1,71 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+sourceCompatibility = 21
+targetCompatibility = 21
+group = 'net.scape.project'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+    maven { url 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT'
+        eachDependency {
+            if (requested.group == 'org.spigotmc' && requested.name == 'spigot-api') {
+                useTarget 'io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT'
+                because 'Force resolution to match Paper 1.21.5 API'
+            }
+        }
+    }
+}
+
+dependencies {
+    compileOnly("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
+
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+
+    implementation 'commons-lang:commons-lang:2.6'
+}
+
+processResources {
+    def props = [
+            version: project.version,
+            name: project.name
+    ]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+jar {
+    archiveBaseName.set("SuiteX")
+    archiveVersion.set(project.version.toString())
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes(
+                'Main-Class': 'net.scape.project.suiteX.SuiteX',
+                'Implementation-Title': 'SuiteX',
+                'Implementation-Version': project.version.toString()
+        )
+    }
+
+    // Also exclude some META-INF files
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+}

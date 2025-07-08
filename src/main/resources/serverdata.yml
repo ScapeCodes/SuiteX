@@ -1,0 +1,5 @@
+# this config is for small server data, like; spawn / locations.
+# all data in here is set from in-game and automatically updated.
+unique-joins: 0
+spawn: []
+warps: []
